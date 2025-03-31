@@ -186,7 +186,7 @@ RBDL의 설치를 권장합니다.
 * `rok3_plugin.cc`는 Gazebo main code 이며, `/catkin_ws/src/rok3_study_pkgs/src`에 있습니다.
 * **그리고, `rok3_plugin.cc`에서 사용자는 반드시 `Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*/)`함수에서, 아래 코드 예시와 같이 `Addons::URDFReadFromFile()` 함수 안에 적용되어 있는 `rok3_model.urdf`의 경로를 확인해주시고, 다르다면 바로잡아주시기 바랍니다.**
 
-* **`rok3_model.urdf`는 `home/.gazebo/models/rok3_model/urdf` 폴더에 있으며, 파일 속성 확인을 통해 정확한 경로 확인하시기 바랍니다.**  
+* **`rok3_model.urdf`는 `/home/.gazebo/models/rok3_model/urdf` 폴더에 있으며, 파일 속성 확인을 통해 정확한 경로 확인하시기 바랍니다.**  
 `rok3_model.sdf` 파일 오른쪽 클릭 -> `Properties` -> `Location` 확인
 
 **In `rok3_plugin.cc`**
@@ -212,7 +212,7 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 
     //* model.urdf file based model data input to [Model* rok3_model] for using RBDL
     Model* rok3_model = new Model();
-    Addons::URDFReadFromFile("/root/.gazebo/models/rok3_model/urdf/rok3_model.urdf", rok3_model, true, true);
+    Addons::URDFReadFromFile("/home/user_name/.gazebo/models/rok3_model/urdf/rok3_model.urdf", rok3_model, true, true);
     //↑↑↑ Check File Path ↑↑↑
     nDoF = rok3_model->dof_count - 6; // Get degrees of freedom, except position and orientation of the robot
     joint = new ROBO_JOINT[nDoF]; // Generation joint variables struct
