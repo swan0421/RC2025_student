@@ -122,7 +122,7 @@ RBDL의 설치를 권장합니다.
 	> sudo make
 	> sudo make install
 
-2. 그리고 다시 패키지를 컴파일하기 위해 터미널 창을 열어 `cd ~/catkin_ws && catkin_make`을 입력하여 컴파일을 진행합니다.
+2. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/catkin_ws && catkin_make`을 입력하여 컴파일을 진행합니다.
 ----
 
 ### 3.How to run RobotControl2025 package
