@@ -109,7 +109,7 @@ RBDL의 설치를 권장합니다.
 
 * #### Setting for Fixed / Floating Dynamics
 
-`HOME/.gazebo/models/rok3_model`폴더에 있는 `model.sdf`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 `<fixed to world>`의 joint를 다음과 같이 셋팅 합니다.
+`Home/.gazebo/models/rok3_model`폴더에 있는 `model.sdf`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 `<fixed to world>`의 joint를 다음과 같이 셋팅 합니다.
 
 **Setting Floating Dynamics in `model.sdf`**
 ``` js
