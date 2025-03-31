@@ -377,7 +377,7 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 
 
     //* setting for getting dt
-    last_update_time = model->GetWorld()->GetSimTime();
+    last_update_time = model->GetWorld()->SimTime();
     update_connection = event::Events::ConnectWorldUpdateBegin(boost::bind(&rok3_plugin::UpdateAlgorithm, this));
     
     
@@ -395,7 +395,7 @@ void gazebo::rok3_plugin::UpdateAlgorithm()
      */
 
     //* UPDATE TIME : 1ms
-    common::Time current_time = model->GetWorld()->GetSimTime();
+    common::Time current_time = model->GetWorld()->SimTime();
     dt = current_time.Double() - last_update_time.Double();
     //    cout << "dt:" << dt << endl;
     time = time + dt;
@@ -484,21 +484,21 @@ void gazebo::rok3_plugin::GetjointData()
      * encoder unit : [rad] and unit conversion to [deg]
      * velocity unit : [rad/s] and unit conversion to [rpm]
      */
-    joint[LHY].actualRadian = L_Hip_yaw_joint->GetAngle(0).Radian();
-    joint[LHR].actualRadian = L_Hip_roll_joint->GetAngle(0).Radian();
-    joint[LHP].actualRadian = L_Hip_pitch_joint->GetAngle(0).Radian();
-    joint[LKN].actualRadian = L_Knee_joint->GetAngle(0).Radian();
-    joint[LAP].actualRadian = L_Ankle_pitch_joint->GetAngle(0).Radian();
-    joint[LAR].actualRadian = L_Ankle_roll_joint->GetAngle(0).Radian();
+    joint[LHY].actualRadian = L_Hip_yaw_joint->Position(0);
+    joint[LHR].actualRadian = L_Hip_roll_joint->Position(0);
+    joint[LHP].actualRadian = L_Hip_pitch_joint->Position(0);
+    joint[LKN].actualRadian = L_Knee_joint->Position(0);
+    joint[LAP].actualRadian = L_Ankle_pitch_joint->Position(0);
+    joint[LAR].actualRadian = L_Ankle_roll_joint->Position(0);
 
-    joint[RHY].actualRadian = R_Hip_yaw_joint->GetAngle(0).Radian();
-    joint[RHR].actualRadian = R_Hip_roll_joint->GetAngle(0).Radian();
-    joint[RHP].actualRadian = R_Hip_pitch_joint->GetAngle(0).Radian();
-    joint[RKN].actualRadian = R_Knee_joint->GetAngle(0).Radian();
-    joint[RAP].actualRadian = R_Ankle_pitch_joint->GetAngle(0).Radian();
-    joint[RAR].actualRadian = R_Ankle_roll_joint->GetAngle(0).Radian();
+    joint[RHY].actualRadian = R_Hip_yaw_joint->Position(0);
+    joint[RHR].actualRadian = R_Hip_roll_joint->Position(0);
+    joint[RHP].actualRadian = R_Hip_pitch_joint->Position(0);
+    joint[RKN].actualRadian = R_Knee_joint->Position(0);
+    joint[RAP].actualRadian = R_Ankle_pitch_joint->Position(0);
+    joint[RAR].actualRadian = R_Ankle_roll_joint->Position(0);
 
-    joint[WST].actualRadian = torso_joint->GetAngle(0).Radian();
+    joint[WST].actualRadian = torso_joint->Position(0);
 
     for (int j = 0; j < nDoF; j++) {
         joint[j].actualDegree = joint[j].actualRadian*R2D;
