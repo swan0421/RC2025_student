@@ -56,15 +56,6 @@
 > ```js
 > source ~/.bashrc
 ----
-
-
-4. [GitHub](https://github.com/)에 미리 가입한 상태면, 해당 패키지를 공동 작업하는데 있어 도움이됩니다.  
-따라서, 가입을 희망합니다. 또한, `Token password`를 발급받기 바랍니다.  
-[토큰 발급 방법](https://hoohaha.tistory.com/37) 을 참고하시기 바랍니다.  
-*`토큰은 생성 이후에 다시 확인할 수 없으니, 따로 저장해두어야 합니다.`*
-
-
-----
 ## Simulation Manual 
 ### 1.[Download](https://github.com/swan0421/RobotControl2025) and Setting RobotControl2025
 1. [RobotControl2025 Repository](https://github.com/swan0421/RobotControl2025)에 접속, link : https://github.com/swan0421/RobotControl2025
@@ -231,7 +222,7 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 
 
     //* setting for getting dt
-    last_update_time = model->GetWorld()->GetSimTime();
+    last_update_time = model->GetWorld()->SimTime();
     update_connection = event::Events::ConnectWorldUpdateBegin(boost::bind(&rok3_plugin::UpdateAlgorithm, this));
 
 }
@@ -246,7 +237,7 @@ cd ~/catkin_ws && catkin_make
 **최종적으로, 다음과 같은 명령어를 통해 시뮬레이션 실행**
 
 ```
-roslaunch rok3_study_pkgs rok3.launch
+roslaunch RobotControl2025 rok3.launch
 ```
 
 ## 1. 실습 1 : 3-Link Planar Arm의 Forward Kinematics
