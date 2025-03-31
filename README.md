@@ -23,7 +23,7 @@
 ###### *`(catkin workspace가 설정되어있다면 Simulation Manual로 이동)`*
 * terminal
 > ```js
-> cmkdir -p ~/catkin_ws/src
+> mkdir -p ~/catkin_ws/src
 > cd ~/catkin_ws/src
 > catkin_init_workspace
 > cd ~/catkin_ws
