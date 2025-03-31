@@ -69,32 +69,20 @@
 ### 1.[Download](https://github.com/swan0421/RobotControl2025) and Setting RobotControl2025
 1. [RobotControl2025 Repository](https://github.com/swan0421/RobotControl2025)에 접속, link : https://github.com/swan0421/RobotControl2025
 
-2. 해당 Repository에 접속 후, 우측 상단의 Fork를 클릭하여, 본인의 Github Repository에 복제되었는지 확인합니다.  
-(`swan0421/Robotcontrol2025` -> `User_id/Robotcontrol2025`)
-```
-Fork란?  
+2. 복제된 본인의 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사하거나,`Download ZIP` 을 통해 해당 패키지를 다운 받습니다.
 
-다른 사람의 Github Repository 에서 내가 수정하거나 기능을 추가하고자 할 때,  
-해당 Repository를 내 Github Repository로 그대로 복제하는 기능이다.
-
-Fork한 Repository는 원본 Repository와 연결되어 있어,  
-원본 Repository에 변화가 생기면, Fork한 Repository에 반영할 수 있다.
-```
-
-3. 복제된 본인의 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사하거나,`Download ZIP` 을 통해 해당 패키지를 다운 받습니다.
-
-4.  주소를 복사하였다면 `Home/catkin_make/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
+3.  주소를 복사하였다면 `Home/catkin_make/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
 	* terminal
 	> ```js
 	> git clone https://github.com/swan0421/RobotControl2025.git
 	
 	`Download ZIP` 을 통해 해당 패키지를 다운받았다면, `Home/catkin_make/src/` 위치에 압축 해제 합니다.
 	
-5. `rok3_model` 폴더를 `Home/.gazebo/models/` 폴더로 가져와서 시뮬레이션을 위한 파일 셋팅을 마무리합니다.  
+4. `rok3_model` 폴더를 `Home/.gazebo/models/` 폴더로 가져와서 시뮬레이션을 위한 파일 셋팅을 마무리합니다.  
 ***(`.gazebo` 폴더가 보이지 않으면,  Home 폴더에서, `Ctrl+H` 를 눌러서 폴더 숨김 해제를 할 것)***  
 ***(Gazebo를 실행한 적이 없는 경우, 숨김해제를 하여도 폴더가 보이지 않을 수 있음. Terminal 에서 `gazebo`를 입력하여 한번 실행해준 후 다시 확인할 것)***
          
-6. 패키지를 컴파일하기 전에, section 2를 진행하시기 바랍니다.
+5. 패키지를 컴파일하기 전에, section 2를 진행하시기 바랍니다.
 ----
 
 
