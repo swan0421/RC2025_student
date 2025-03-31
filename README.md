@@ -77,7 +77,7 @@
 ----
 
 
-### 2.Libraries used in RobotControl2025 Package
+### 2.Libraries used in rok3_study_pkgs Package
 
 | Library | Description |
 | ------ | ----------- |
@@ -144,7 +144,7 @@ RBDL의 설치를 권장합니다.
 </sdf>
 ```
 
-다음으로, `catkin_ws/src/RobotControl2025/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
+다음으로, `catkin_ws/src/rok3_study_pkgs/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
 
 **Setting Floating Dynamics in `rok3.world`**
 ``` js
