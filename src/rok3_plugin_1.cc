@@ -161,7 +161,7 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 
     //* model.urdf file based model data input to [Model* rok3_model] for using RBDL
     Model* rok3_model = new Model();
-    Addons::URDFReadFromFile("/root/.gazebo/models/rok3_model/urdf/rok3_model.urdf", rok3_model, true, true);
+    Addons::URDFReadFromFile("home/user_name/.gazebo/models/rok3_model/urdf/rok3_model.urdf", rok3_model, true, true);
     //↑↑↑ Check File Path ↑↑↑
     nDoF = rok3_model->dof_count - 6; // Get degrees of freedom, except position and orientation of the robot
     joint = new ROBO_JOINT[nDoF]; // Generation joint variables struct
