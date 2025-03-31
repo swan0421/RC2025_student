@@ -65,7 +65,7 @@
 3.  주소를 복사하였다면 `Home/catkin_ws/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
 	* terminal
 	> ```js
-	> git clone https://github.com/swan0421/RobotControl2025.git
+	> git clone https://github.com/swan0421/RobotControl2025.git rok3_study_pkgs
 	
 	`Download ZIP` 을 통해 해당 패키지를 다운받았다면, `Home/catkin_ws/src/` 위치에 압축 해제 합니다.
 	
