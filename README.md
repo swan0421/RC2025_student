@@ -60,14 +60,13 @@
 ### 1.[Download](https://github.com/swan0421/RobotControl2025) and Setting RobotControl2025
 1. [RobotControl2025 Repository](https://github.com/swan0421/RobotControl2025)에 접속, link : https://github.com/swan0421/RobotControl2025
 
-2. 복제된 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사하거나,`Download ZIP` 을 통해 해당 패키지를 다운 받습니다.
+2. 복제된 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사합니다.
 
 3.  주소를 복사하였다면 `Home/catkin_ws/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
 	* terminal
 	> ```js
 	> git clone https://github.com/swan0421/RobotControl2025.git rok3_study_pkgs
 	
-	`Download ZIP` 을 통해 해당 패키지를 다운받았다면, `Home/catkin_ws/src/` 위치에 압축 해제 합니다.
 	
 4. `rok3_model` 폴더를 `Home/.gazebo/models/` 폴더로 가져와서 시뮬레이션을 위한 파일 셋팅을 마무리합니다.  
 ***(`.gazebo` 폴더가 보이지 않으면,  Home 폴더에서, `Ctrl+H` 를 눌러서 폴더 숨김 해제를 할 것)***  
@@ -77,7 +76,7 @@
 ----
 
 
-### 2.Libraries used in RobotControl2025 Package
+### 2.Libraries used in rok3_study_pkgs Package
 
 | Library | Description |
 | ------ | ----------- |
@@ -144,7 +143,7 @@ RBDL의 설치를 권장합니다.
 </sdf>
 ```
 
-다음으로, `catkin_ws/src/RobotControl2025/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
+다음으로, `catkin_ws/src/rok3_study_pkgs/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
 
 **Setting Floating Dynamics in `rok3.world`**
 ``` js
