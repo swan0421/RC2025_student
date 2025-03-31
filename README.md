@@ -114,7 +114,7 @@ RBDL의 설치를 권장합니다.
 1. `Home/catkin_ws/src/RobotControl2025/src`  위치에서 터미널을 실행합니다.
 * terminal : 
 	> ```js
-	> git clone --recursive [https://github.com/rbdl/rbdl](https://github.com/rbdl/rbdl)
+	> git clone --recursive https://github.com/rbdl/rbdl
 	> cd rbdl
 	> mkdir build
 	> cd build
