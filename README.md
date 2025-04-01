@@ -8,9 +8,9 @@
 * What to do before simulation
 
 * Simulation Manual
-  1. [Download](https://github.com/swan0421/RobotControl2025) and Setting RobotControl2025
-  2. Libraries used in RobotControl2025 Package
-  3. How to run RobotControl2025 package, **Please read section 2 before proceeding.**
+  1. [Download](https://github.com/swan0421/RC2025_student) and Setting RC2025_student
+  2. Libraries used in rok3_study_pkgs Package
+  3. How to run rok3_study_pkgs package, **Please read section 2 before proceeding.**
 ----
 
 ## What to do before simulation 
@@ -21,7 +21,7 @@
 > **catkin workspace setting**
 ##### **1. Setup catkin workspace**
 ###### *`(catkin workspace가 설정되어있다면 Simulation Manual로 이동)`*
-* terminal
+* terminal:
 > ```js
 > mkdir -p ~/catkin_ws/src
 > cd ~/catkin_ws/src
@@ -31,7 +31,7 @@
 
 ##### **2. .bashrc 파일에 내용 추가하기**
 
-* terminal
+* terminal:
 > ```js
 > gedit ~/.bashrc
  내용 추가하기
@@ -52,20 +52,21 @@
 > alias cw='cd ~/catkin_ws'
 > alias cs='cd ~/catkin_ws/src'
 > alias cm='cd ~/catkin_ws && catkin_make'
-* terminal
+* terminal:
 > ```js
 > source ~/.bashrc
 ----
 ## Simulation Manual 
-### 1.[Download](https://github.com/swan0421/RobotControl2025) and Setting RobotControl2025
-1. [RobotControl2025 Repository](https://github.com/swan0421/RobotControl2025)에 접속, link : https://github.com/swan0421/RobotControl2025
+### 1.[Download](https://github.com/swan0421/RC2025_student) and Setting RC2025_student
+1. [RC2025_student Repository](https://github.com/swan0421/RC2025_student)에 접속, link : https://github.com/swan0421/RC2025_student
 
 2. 복제된 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사합니다.
 
 3.  주소를 복사하였다면 `Home/catkin_ws/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
-	* terminal
+* terminal:
+  
 	> ```js
-	> git clone https://github.com/swan0421/RobotControl2025.git rok3_study_pkgs
+	> git clone https://github.com/swan0421/RC2025_student.git rok3_study_pkgs
 	
 	
 4. `rok3_model` 폴더를 `Home/.gazebo/models/` 폴더로 가져와서 시뮬레이션을 위한 파일 셋팅을 마무리합니다.  
@@ -90,7 +91,8 @@ RBDL의 설치를 권장합니다.
 **RBDL Install**
 
 1. `Home/catkin_ws/src/rok3_study_pkgs/src`  위치에서 터미널을 실행합니다.
-* terminal : 
+* terminal :
+  
 	> ```js
 	> git clone --recursive https://github.com/rbdl/rbdl
 	> cd rbdl
@@ -110,23 +112,6 @@ RBDL의 설치를 권장합니다.
 
 `Home/.gazebo/models/rok3_model`폴더에 있는 `model.sdf`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 `<fixed to world>`의 joint를 다음과 같이 셋팅 합니다.
 
-**Setting Floating Dynamics in `model.sdf`**
-``` js
-<?xml version="1.0"?>
-<sdf version='1.6'>
-  <model name='rok3_model'>
-  <!-- <joint name="fixed to world" type="fixed">
-      <parent>world</parent>
-      <child>base_link</child>
-    </joint> -->
-.
-.
-.
-  </model>
-</sdf>
-```
-
-
 **Setting Fixed Dynamics in `model.sdf`**
 ``` js
 <?xml version="1.0"?>
@@ -136,6 +121,22 @@ RBDL의 설치를 권장합니다.
       <parent>world</parent>
       <child>base_link</child>
     </joint>
+.
+.
+.
+  </model>
+</sdf>
+```
+
+**Setting Floating Dynamics in `model.sdf`**
+``` js
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='rok3_model'>
+  <!-- <joint name="fixed to world" type="fixed">
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint> -->
 .
 .
 .
@@ -228,13 +229,15 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 ```
 
 **모든 준비 과정이 끝나면, `catkin_make`을 입력하여 컴파일을 진행합니다.**
-
+* terminal :
+  
 ```
 cd ~/catkin_ws && catkin_make
 ```
 
 **최종적으로, 다음과 같은 명령어를 통해 시뮬레이션 실행**
-
+* terminal :
+  
 ```
 roslaunch rok3_study_pkgs rok3.launch
 ```
