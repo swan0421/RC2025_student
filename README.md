@@ -128,6 +128,7 @@ RBDL의 설치를 권장합니다.
 </sdf>
 ```
 
+
 **Setting Floating Dynamics in `model.sdf`**
 ``` js
 <?xml version="1.0"?>
@@ -146,24 +147,6 @@ RBDL의 설치를 권장합니다.
 
 다음으로, `catkin_ws/src/rok3_study_pkgs/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
 
-**Setting Floating Dynamics in `rok3.world`**
-``` js
-<?xml version="1.0" ?>
-<sdf version="1.6">
-  <world name="rok3">
-.
-.
-.
-    <include>
-      <uri>model://rok3_model</uri>
-      <pose frame=''>0 0 0.947 0 0 0</pose>
-      <plugin name="rok3_plugin" filename="librok3_study_pkgs.so"/> 
-    </include>
-  </world>
-</sdf>
-```
-
-
 **Setting Fixed Dynamics in `rok3.world`**
 ``` js
 <?xml version="1.0" ?>
@@ -175,6 +158,23 @@ RBDL의 설치를 권장합니다.
     <include>
       <uri>model://rok3_model</uri>
       <pose frame=''>0 0 1.947 0 0 0</pose>
+      <plugin name="rok3_plugin" filename="librok3_study_pkgs.so"/> 
+    </include>
+  </world>
+</sdf>
+```
+
+**Setting Floating Dynamics in `rok3.world`**
+``` js
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rok3">
+.
+.
+.
+    <include>
+      <uri>model://rok3_model</uri>
+      <pose frame=''>0 0 0.947 0 0 0</pose>
       <plugin name="rok3_plugin" filename="librok3_study_pkgs.so"/> 
     </include>
   </world>
