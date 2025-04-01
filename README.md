@@ -253,7 +253,7 @@ void Practice()
 ~~~c
 std::cout << "C_IE = " << C_IE << std::endl;
 ~~~
-* Load 함수 첫줄에 Practice() 함수 사용
+* Load 함수에 Practice() 함수 사용
 * 3-link planar arm를 위한 Homogeneous Transformation Matrix 만들기
 * 모든 링크의 길이는 1m로 가정
 ~~~c
