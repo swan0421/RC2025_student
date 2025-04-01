@@ -115,10 +115,10 @@ RBDL의 설치를 권장합니다.
 <?xml version="1.0"?>
 <sdf version='1.6'>
   <model name='rok3_model'>
-  <!--joint name="fixed to world" type="fixed">
+  <!-- <joint name="fixed to world" type="fixed">
       <parent>world</parent>
       <child>base_link</child>
-    </joint-->
+    </joint> -->
 .
 .
 .
