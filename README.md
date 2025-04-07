@@ -270,6 +270,11 @@ MatrixXd jointToRotMat(VectorXd q)
 VectorXd rotToEuler(MatrixXd rotMat)	// EulerZYX
 ~~~
 
+* 첫번째 관절의 각도가 10도, 두번째 관절의 각도가 20도, 세번째 관절의 각도가 30도일때,
+터미널에 End-effector의 Position, Rotation Matrix, 그리고 EulerZYX 값을 출력하세요.
+
+---
+
 ## 2. 실습 2 : RoK-3의 Forward Kinematics  
 
 <img width="700" src="./RoK-3_img/RoK-3 Frame.jpg" alt="rok-3 frame">  
