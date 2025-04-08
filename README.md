@@ -317,9 +317,9 @@ MatrixXd jointToPosJac(VectorXd q)
     MatrixXd T_I1(4,4), T_I2(4,4), T_I3(4,4), T_I4(4,4), T_I5(4,4), T_I6(4,4);
     MatrixXd R_I1(3,3), R_I2(3,3), R_I3(3,3), R_I4(3,3), R_I5(3,3), R_I6(3,3);
     Vector3d r_I_I1(3), r_I_I2(3), r_I_I3(3), r_I_I4(3), r_I_I5(3), r_I_I6(3);
-    Vector3d n_1(3), n_2(3), n_3(3), n_4(3), n_5(3), n_6(3);
-    Vector3d n_I_1(3),n_I_2(3),n_I_3(3),n_I_4(3),n_I_5(3),n_I_6(3);
-    Vector3d r_I_IE(3);
+    Vector3d n_1(0), n_2(0), n_3(0), n_4(0), n_5(0), n_6(0);
+    Vector3d n_I_1(0),n_I_2(0),n_I_3(0),n_I_4(0),n_I_5(0),n_I_6(0);
+    Vector3d r_I_IE(0);
 
 
     //* Compute the relative homogeneous transformation matrices.
@@ -428,7 +428,7 @@ MatrixXd jointToRotJac(VectorXd q)
 2. 출력된 결과물 capture 파일
 
 
-## 실습 4 : RoK-3의 Pseudo-Inverse 함수와 rotTatToRotVec 함수 만들리
+## 실습 4 : RoK-3의 Pseudo-Inverse 함수와 rotTatToRotVec 함수 만들기
 
 * pseudoInverseMat 함수 만들기
 ~~~c
