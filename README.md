@@ -316,10 +316,10 @@ MatrixXd jointToPosJac(VectorXd q)
     MatrixXd T_I0(4,4), T_01(4,4), T_12(4,4), T_23(4,4), T_34(4,4), T_45(4,4), T_56(4,4), T_6E(4,4);
     MatrixXd T_I1(4,4), T_I2(4,4), T_I3(4,4), T_I4(4,4), T_I5(4,4), T_I6(4,4);
     MatrixXd R_I1(3,3), R_I2(3,3), R_I3(3,3), R_I4(3,3), R_I5(3,3), R_I6(3,3);
-    Vector3d r_I_I1(), r_I_I2(), r_I_I3(), r_I_I4(), r_I_I5(), r_I_I6();
-    Vector3d n_1(), n_2(), n_3(), n_4(), n_5(), n_6();
-    Vector3d n_I_1(),n_I_2(),n_I_3(),n_I_4(),n_I_5(),n_I_6();
-    Vector3d r_I_IE();
+    Vector3d r_I_I1, r_I_I2, r_I_I3, r_I_I4, r_I_I5, r_I_I6;
+    Vector3d n_1, n_2, n_3, n_4, n_5, n_6;
+    Vector3d n_I_1,n_I_2,n_I_3,n_I_4,n_I_5,n_I_6;
+    Vector3d r_I_IE;
 
 
     //* Compute the relative homogeneous transformation matrices.
@@ -399,7 +399,7 @@ MatrixXd jointToRotJac(VectorXd q)
     MatrixXd T_I0(4,4), T_01(4,4), T_12(4,4), T_23(4,4), T_34(4,4), T_45(4,4), T_56(4,4), T_6E(4,4);
     MatrixXd T_I1(4,4), T_I2(4,4), T_I3(4,4), T_I4(4,4), T_I5(4,4), T_I6(4,4);
     MatrixXd R_I1(3,3), R_I2(3,3), R_I3(3,3), R_I4(3,3), R_I5(3,3), R_I6(3,3);
-    Vector3d n_1(3), n_2(3), n_3(3), n_4(3), n_5(3), n_6(3);
+    Vector3d n_1, n_2, n_3, n_4, n_5, n_6;
 
     //* Compute the relative homogeneous transformation matrices.
 
@@ -499,7 +499,7 @@ VectorXd inverseKinematics(Vector3d r_des, MatrixXd C_des, VectorXd q0, double t
     double num_it;
     MatrixXd J_P(6,6), J_R(6,6), J(6,6), pinvJ(6,6), C_err(3,3), C_IE(3,3);
     VectorXd q(6),dq(6),dXe(6);
-    Vector3d dr(3), dph(3);
+    Vector3d dr, dph;
     double lambda;
     
     //* Set maximum number of iterations
