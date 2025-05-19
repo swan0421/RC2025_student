@@ -564,7 +564,7 @@ void Practice()
 {
         ...
         // q = [10;20;30;40;50;60]*pi/180;
-        r_des = jointToPostion(q);
+        r_des = jointToPosition(q);
         C_des = jointToRotMat(q);
         
         q_cal = inverseKinematics(r_des, C_des, q*0.5, 0.001);
