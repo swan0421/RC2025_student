@@ -582,16 +582,16 @@ void Practice()
 
 ## 6. 실습 6 : RoK-3의 Motion Control
 
-* 1-cos 함수로 trajectory 생성하기
+* Cubic Polynomial (3rd Order Polynomial) 함수로 Trajectory 생성하기
 
 ~~~c
-double func_1_cos(double t, double, init, double final, double T)
+double poly3(double t, double, init, double final, double tf)
 {
-        double des;
+        double tmp;
         
         ...
         
-        return des;
+        return tmp;
 }
 ~~~  
 
