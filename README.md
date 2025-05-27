@@ -577,7 +577,7 @@ void Practice()
 
 ### 과제 2
 * Desired Pos = [0; 0.105; -0.55] & Desired Orientation = Base
-* Result = [0.0; 0.0; -63.756; 127.512; -63.756; 0.0]
+* Result = [0.0; 0.0; -63.756; 127.512; -63.756; 0.0;]
 
 
 ## 6. 실습 6 : RoK-3의 Motion Control
